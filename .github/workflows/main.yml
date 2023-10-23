@@ -27,5 +27,5 @@ jobs:
       - name: Deploy
         run: |
           # Use GitHub Pages to deploy your app
-          npm install -g gh-pages
+         
           npm run deploy
