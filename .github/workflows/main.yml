@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -23,9 +24,12 @@ jobs:
 
       - name: Build
         run: npm run build
-
-      - name: Deploy
+        
+      - name: Set Git Identity
         run: |
-          # Use GitHub Pages to deploy your app
-         
+          git config --global user.email "nishantkhatri659@gmail.com"
+          git config --global user.name "Nishant-Khatri"
+          
+      - name: Deploy
+        run:
           npm run deploy
